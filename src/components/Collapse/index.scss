@@ -1,0 +1,95 @@
+.collapse{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 85%;
+    margin: 5px 0px;
+    color: $color-primary;
+    @media (max-width: 767px){
+        width: 100%;
+    }
+    &__header{
+        display: flex;
+        align-items: center;
+        background-color: $color-primary;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0 10px;
+        flex-direction: row;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1;
+        > p, i{
+            color: white;
+        }
+        .chevron{
+            transition: transform 0.4s linear;
+            &__down {
+                transform: rotate(0deg);
+            }
+        
+            &__up {
+                transform: rotate(180deg);
+            }
+            
+        }
+    }
+    &__body{
+        background-color: $color-secondary;
+        border-radius: 0px 0px 10px 10px;
+        opacity: 1;
+        font-size: 16px;
+        transition: font-size 0.15s, opacity 0.1s 0.15s;
+        animation: appear 0.3s;
+        margin: 0;
+        padding: 5px 10px;
+        color: $color-tertiary;
+        ul{
+            list-style-type: none;
+            margin-left: -30px;
+        }
+        &__hidden{
+            font-size: 0;
+            opacity: 0;
+            padding: 0 10px;
+            background-color: $color-secondary;
+            border-radius: 0px 0px 10px 10px;
+            margin: 0;
+            padding: 5px 10px;
+            transition: opacity 0.1s, font-size 0.2s 0.15s;
+            animation: desappear 0.7s;
+            color: $color-tertiary;
+            ul{
+                list-style-type: none;
+                margin-left: -30px;
+            }
+        }
+        
+        @keyframes desappear {
+            0% {
+                transform: translateY(0px);
+                opacity: 1;
+             }
+             40%{
+                opacity: 0;
+             }
+            100% { 
+                transform: translateY(-150px);
+                opacity: 0;
+             }
+        }
+    }
+    @keyframes appear {
+        0% {
+            transform: translateY(-150px);
+            opacity: 0;
+         }
+         50%{
+            opacity: 0;
+         }
+        100% { 
+            transform: translateY(0px);
+            opacity: 1;
+         }
+    }
+}

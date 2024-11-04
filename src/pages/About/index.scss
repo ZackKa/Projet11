@@ -1,0 +1,29 @@
+.collapsible{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 20px 50px;
+    @media (max-width: 767px){
+        margin: 20px;
+    }
+    p{
+        padding: 0px 5px;
+        color: $color-tertiary
+    }
+}
+.banniereAbout{
+    .banniere{
+        &__filtreOpacite{
+            opacity: 0.3;
+            @media (max-width: 767px){
+                height: 150px;
+            }
+        }
+        &__image{
+            @media (max-width: 767px){
+                height: 150px;
+            }
+        }
+    }
+}

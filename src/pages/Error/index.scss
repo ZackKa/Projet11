@@ -1,0 +1,14 @@
+.contenueError{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: $color-primary;
+    h1{
+        font-size: 130px;
+    }
+    a{
+        color:  $color-tertiary;
+        padding: 60px 0;
+    }
+}
