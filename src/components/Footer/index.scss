@@ -1,0 +1,16 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0 15px 0;
+    background-color: black;
+    p{
+        color: white;
+        @media (max-width: 767px) {
+            width: 37%;
+            text-align: center;
+        }
+    }
+}
