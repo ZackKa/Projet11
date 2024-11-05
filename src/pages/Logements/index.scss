@@ -1,0 +1,81 @@
+.corp{
+    padding: 20px 50px;
+    @media (max-width: 767px){
+        padding: 20px;
+    }
+    &__contenue{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-primary;
+        margin-bottom: 10px;
+        @media (max-width: 767px){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__gauche{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            h1{
+                font-weight: 500;
+                margin: auto;
+            }
+            p{
+                margin: 0 0 10px 0;
+                color: $color-tertiary;
+                font-weight: 500;
+            }
+        }
+        &__droit{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            @media (max-width: 767px){
+                flex-direction: row-reverse;
+                align-items: center;
+                width: 100%;
+            }
+            &__image{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                width: 99%;
+                @media (max-width: 767px){
+                    width: 100%;
+                    justify-content: flex-end
+                }
+                img{
+                    border-radius: 50px;
+                    width: 64px;
+                    height: 64px;
+                }
+                p{
+                    text-align: right;
+                    margin-right: 10px;
+                    width: 93px;
+                }
+            }
+        }
+    }
+    &__collapse{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        @media (max-width: 767px){
+            flex-direction: column;
+        }
+        .collapse{
+            width: 45%;
+            @media (max-width: 767px){
+                width: 100%;
+            }
+        }
+    }
+}

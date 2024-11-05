@@ -1,0 +1,12 @@
+.tags{
+    display: flex;
+    flex-direction: row;
+    &__tag{
+        margin: 0px 8px 0px 0px;
+        background-color: $color-primary;
+        padding: 5px 21px;
+        color: white;
+        border-radius: 20px;
+        font-size: 13px;
+    }
+}
